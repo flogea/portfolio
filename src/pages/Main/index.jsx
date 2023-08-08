@@ -30,7 +30,7 @@ function Main() {
       <ScrollToTopButton />
       <div className="wrap">
         <Navbar onClick={handleLinkClick} />
-        <Greeting />
+        <Greeting onClick={handleLinkClick} />
         <Projects ref={projectRef} />
         <AboutMe ref={aboutRef} />
         <Contacts ref={contacttRef} />

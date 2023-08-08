@@ -6,7 +6,7 @@ import { Button } from '../../widgets';
 
 import photoOfMe from '../../assets/image/me.jpg';
 
-function Greeting() {
+function Greeting({ onClick }) {
   return (
     <div>
       <div className="greeting">
@@ -18,7 +18,7 @@ function Greeting() {
           <div className="text">
             <p>Привет! Я Катя и я — веб разработчик. Занимаюсь front-end разработкой на React.</p>
           </div>
-          <div className="button">
+          <div className="button" onClick={() => onClick('project')}>
             <Button>Смотреть портфолио</Button>
           </div>
         </div>
