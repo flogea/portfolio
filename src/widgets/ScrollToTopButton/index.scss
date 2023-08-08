@@ -1,0 +1,25 @@
+.scroll-to-top-button {
+  position: fixed;
+  z-index: 1000;
+  right: 5vw;
+  bottom: 3vh;
+  width: 55px;
+  height: 55px;
+  background-color: transparent;
+  backdrop-filter: blur(2.5px);
+  -webkit-backdrop-filter: blur(2.5px);
+  color: white;
+  border: 2px solid white;
+  border-radius: 50px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &.visible {
+    opacity: 1;
+  }
+}

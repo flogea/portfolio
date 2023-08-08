@@ -1,0 +1,42 @@
+$white: rgba(255, 255, 255, 1);
+$mainFont: 'Tektur', cursive;
+$secondaryGradient: linear-gradient(90deg, #e16cf0 0%, #6cc1f0 100%);
+
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  background: $secondaryGradient;
+  height: 80px;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  // margin-left: calc(100vw - 10%);
+
+  span {
+    display: inline-block;
+    // padding-left: 100%;
+    animation: marquee 10s linear infinite;
+    font-family: $mainFont;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $white;
+  }
+
+  @media (max-width: 420px) {
+    height: 50px;
+
+    span {
+      font-size: 24px;
+    }
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-10%);
+  }
+}

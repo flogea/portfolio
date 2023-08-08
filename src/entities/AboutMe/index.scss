@@ -1,0 +1,98 @@
+$mainFont: 'Tektur', cursive;
+$secondaryFont: 'Ubuntu', sans-serif;
+$mainGradient: linear-gradient(90deg, #8e6cf0 0%, #6cc1f0 100%);
+$blue: rgba(109, 189, 240, 1);
+$purple: rgba(121, 104, 155, 1);
+$white: rgba(255, 255, 255, 1);
+$pink: #e16cf0;
+
+.aboutMe {
+  width: 100%;
+  // height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .inverted {
+    color: transparent;
+    background: none;
+    -webkit-text-stroke: 3px $pink;
+    margin: 60px;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      'header1 header2'
+      'content content';
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+
+    &::after {
+      content: url('../../assets/pyatno.svg');
+      position: absolute;
+      top: 0;
+      left: -100px;
+      transform: rotate(45deg) scale(0.9);
+    }
+
+    .imageBlock {
+      display: flex;
+      justify-content: end;
+
+      img {
+        width: 60%;
+      }
+    }
+  }
+
+  .skills {
+    grid-area: content;
+    margin: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media (max-width: 1024px) {
+    .about {
+      &::after {
+        content: url('../../assets/pyatno.svg');
+        position: absolute;
+        top: -200px;
+        left: -200px;
+        transform: rotate(45deg) scale(0.6);
+      }
+
+      .imageBlock {
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 420px) {
+    .about {
+      &::after {
+        content: url('../../assets/pyatno.svg');
+        position: absolute;
+        top: -200px;
+        left: -200px;
+        transform: rotate(45deg) scale(0.6);
+      }
+
+      .imageBlock {
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
+}

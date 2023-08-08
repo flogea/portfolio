@@ -1,0 +1,48 @@
+$pink: #e16cf0;
+$mainGradient: linear-gradient(90deg, #8e6cf0 0%, #6cc1f0 100%);
+$blue: rgba(109, 189, 240, 1);
+$purple: rgba(121, 104, 155, 1);
+$white: rgba(255, 255, 255, 1);
+
+.skill {
+  min-width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+
+  h3 {
+    color: $white;
+  }
+
+  rect {
+    fill: transparent;
+  }
+
+  text {
+    font-size: 24px;
+    font-weight: 400;
+    fill: white;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 600px) and (max-width: 800px) {
+    h3 {
+      font-size: 20px;
+    }
+
+    min-width: 100px;
+    width: 150px;
+  }
+
+  @media (max-width: 600px) {
+    h3 {
+      font-size: 20px;
+    }
+
+    min-width: 100px;
+    width: 100px;
+  }
+}

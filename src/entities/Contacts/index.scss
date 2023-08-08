@@ -1,0 +1,72 @@
+$mainFont: 'Tektur', cursive;
+$secondaryFont: 'Ubuntu', sans-serif;
+$bg: #301e55;
+$secondaryGradient: linear-gradient(90deg, #e16cf0 0%, #6cc1f0 100%);
+$blue: rgba(109, 189, 240, 1);
+$white: rgba(255, 255, 255, 1);
+$pink: #e16cf0;
+
+.contacts {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    margin: 60px;
+
+    span {
+      background: $bg;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke: 3px $pink;
+
+      @media (max-width: 420px) {
+        -webkit-text-stroke: 1px $pink;
+      }
+    }
+  }
+
+  .links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: $mainFont;
+    color: $blue;
+    font-size: 24px;
+
+    .link {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+
+      img {
+        margin: 0 10px;
+        // padding: 10px;
+      }
+
+      label {
+        a {
+          width: 100%;
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    }
+
+    @media (max-width: 1024px) {
+      width: 70%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 16px;
+    }
+  }
+}

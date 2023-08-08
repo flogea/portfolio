@@ -1,0 +1,53 @@
+$blue: #6dbdf0;
+$purple: rgba(121, 104, 155, 1);
+$mainFont: 'Tektur', cursive;
+
+.Button {
+  min-width: 240px;
+  height: 70px;
+  border: 3px solid $blue;
+  border-radius: 15px;
+  color: #fff;
+  background: transparent;
+  text-shadow: 0px 0px 10px $blue;
+  font-family: $mainFont;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 20px 0;
+
+  &:disabled {
+    color: $purple;
+    text-shadow: none;
+    border: 3px solid $purple;
+    cursor: auto;
+
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    outline: none;
+    color: inherit;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 0 $blue;
+    overflow: hidden;
+  }
+
+  @media (max-width: 420px) {
+    width: 100px;
+    height: 60px;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+}

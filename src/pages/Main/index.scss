@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;700;900&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
+$mainFont: 'Tektur', cursive;
+$bg: #301e55;
+$secondaryFont: 'Ubuntu', sans-serif;
+$mainGradient: linear-gradient(90deg, #8e6cf0 0%, #6cc1f0 100%);
+$blue: rgba(109, 189, 240, 1);
+$purple: rgba(121, 104, 155, 1);
+$white: rgba(255, 255, 255, 1);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #010101 0%, #623daf 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  @media (max-width: 420px) {
+    width: 100%;
+  }
+
+  .wrap {
+    width: 80%;
+    margin: auto;
+    // position: relative;
+
+    @media (max-width: 420px) {
+      width: 90%;
+    }
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-family: $mainFont;
+  font-weight: 700;
+}
+
+h1,
+h3 {
+  text-transform: uppercase;
+  background: $mainGradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  font-size: 128px;
+  line-height: 1;
+
+  @media (max-width: 1024px) {
+    font-size: 96px;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 64px;
+    text-indent: 0 !important;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 40px;
+    text-indent: 0 !important;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  color: $white;
+
+  @media (max-width: 1024px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  font-size: 32px;
+  cursor: pointer;
+
+  @media (max-width: 450px) {
+    font-size: 20px;
+  }
+}
+
+h4,
+h5 {
+  font-family: $secondaryFont;
+  font-weight: 400;
+}
+
+h4 {
+  font-size: 24px;
+
+  @media (max-width: 450px) {
+    font-size: 16px;
+  }
+}
+
+h5 {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: $white;
+  margin: 0 34px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $blue;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 14px;
+  }
+}
+
+p {
+  font-size: 32px;
+  font-weight: 400;
+  color: $white;
+
+  @media (max-width: 1024px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 16px;
+  }
+}
